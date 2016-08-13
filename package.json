@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "watch:js": "webpack --watch"
   },
   "author": "",
   "license": "ISC",
@@ -12,7 +12,9 @@
     "babel": "^6.5.2",
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
+    "hackernews-api": "^1.0.0",
     "jquery": "^3.1.0",
+    "mongoose": "^4.5.8",
     "nodemon": "^1.10.0",
     "react": "^15.3.0",
     "react-dom": "^15.3.0",
