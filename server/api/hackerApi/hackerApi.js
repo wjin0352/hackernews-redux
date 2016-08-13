@@ -1,9 +1,6 @@
-// hackernews sdk, the methods are built into the sdk
 // > var hn = require('hackernews-api');
 // > hn.getItem(8863);
-
 // call hn.getItem(parameter) and you get the hash below
-
 // {
 //   by : "dhouston",
 //   descendants : 71,
@@ -15,11 +12,3 @@
 //   type : "story",
 //   url : "http://www.getdropbox.com/u/2/screencast.html"
 // }
-// > hn.getUser('wcember');
-// { about: 'programmer, actuary, consultant.<p>williamcember.com\ngithub.com&#x2F;
-// wcember\n@wcember',
-//   created: 1382846640,
-//   delay: 0,
-//   id: 'wcember',
-//   karma: 4,
-//   submitted: [ 9106838, 7979403, 6638253 ] }
