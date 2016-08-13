@@ -4,7 +4,7 @@ var router = require('react-router');
 var Router = router.Router;
 var Route = router.Route;
 var browerHistory = router.browerHistory;
-
+var User = require('../server/api/user/controller.user')
 
 var App = React.createClass({
 
@@ -25,8 +25,21 @@ var UsersList = React.createClass({
   render: function() {
     return (
       <div className="users-list" >
-
+        {props.children}
       </div>
+    )
+  }
+})
+
+var UsersListContainer = React.createClass({
+  getUsers: function() {
+    User.getUsers();
+  },
+  render: function() {
+    return (
+      <li>
+
+      </li>
     )
   }
 })
@@ -62,18 +75,11 @@ var UserDelete = React.createClass({
   }
 })
 
-var
-
-
-
 var router = (
   <Router history={browerHistory}>
     <Route path="/" component={App}>
-      <IndexRoute component={UsersList} />
-      <Route path="" component={} />
-      <Route path="" component={} />
-      <Route path="" component={} />
-      <Route path="" component={} />
+      <IndexRoute component={UsersListContainer} />
+      <Route path="" component={UsersList} />
     </Route>
   </Router>
 )
