@@ -53,17 +53,61 @@
 	var Route = router.Route;
 	var browerHistory = router.browerHistory;
 	
-	var App = function App() {
-	  return React.createElement(
-	    'div',
-	    { className: 'app-container' },
-	    React.createElement(
-	      'h3',
-	      null,
-	      'Hacker News Feed'
-	    )
-	  );
-	};
+	var App = React.createClass({
+	  displayName: 'App',
+	
+	
+	  render: function render() {
+	    return React.createElement(
+	      'div',
+	      { className: 'app-container' },
+	      React.createElement(
+	        'h3',
+	        null,
+	        'Hacker News Feed'
+	      ),
+	      React.createElement(
+	        'div',
+	        null,
+	        props.children
+	      )
+	    );
+	  }
+	});
+	
+	var UsersList = React.createClass({
+	  displayName: 'UsersList',
+	
+	
+	  render: function render() {
+	    return React.createElement('div', { className: 'users-list' });
+	  }
+	});
+	
+	var User = React.createClass({
+	  displayName: 'User',
+	
+	
+	  render: function render() {
+	    return React.createElement('div', { className: 'user' });
+	  }
+	});
+	
+	var UserEdit = React.createClass({
+	  displayName: 'UserEdit',
+	
+	  render: function render() {
+	    return React.createElement('div', { className: 'edit-user' });
+	  }
+	});
+	
+	var UserDelete = React.createClass({
+	  displayName: 'UserDelete',
+	
+	  render: function render() {
+	    return React.createElement('div', { className: 'delete-user' });
+	  }
+	});
 	
 	var router = React.createElement(
 	  Router,
