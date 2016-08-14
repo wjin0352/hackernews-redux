@@ -79,7 +79,7 @@ UserController.prototype.editUser = function(req, res) {
       });
       res.status(204).json(user);
     }).catch(function(error) {
-      console.log(error);
+      console.log(error, 'hello');
     });
 }
 
